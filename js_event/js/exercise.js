@@ -1,0 +1,17 @@
+console.log('演習：イベント');
+
+document.addEventListener('DOMContentLoaded', function(){
+  var e = document.getElementById('button');
+  e.addEventListener('click',function(){
+    appendElement();
+  },false);
+},false);
+
+function appendElement(){
+  var result = document.getElementById('result');
+  var li = document.createElement('li');
+  var text = document.createTextNode(result.value)
+  li.appendChild(text);
+  var lists = document.getElementById('lists');
+  lists.appendChild(li);
+};
